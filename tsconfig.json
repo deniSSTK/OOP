@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es2023", "dom"],
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
