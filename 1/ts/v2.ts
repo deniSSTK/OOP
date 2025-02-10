@@ -22,19 +22,6 @@ class Vector {
         this.theta = Math.atan2(this.componentX, this.componentY);
     };
 
-    public display() {
-        return {
-            x0: this.x0,
-            y0: this.y0,
-            componentX: this.componentX,
-            componentY: this.componentY,
-            xEnd: this.xEnd,
-            yEnd: this.yEnd,
-            r: this.r,
-            theta: this.theta
-        }
-    }
-
     static getEndCoordinates(x0: number, y0: number, componentX: number, componentY: number): {x: number, y: number} {
         return {x: (x0 + componentX), y: (y0 + componentY)};
     };
