@@ -1,13 +1,12 @@
-class stringManipulator {
+export class stringManipulator {
     readonly value: string;
+    readonly length: number;
 
     constructor(value: string) {
         this.value = value;
+        //@ts-ignore
+        this.length = stringManipulator.getLength(value);
     }
-
-    // getValue(): string {
-    //     return this.value;
-    // }
 
     static getLength(...args: string[]): number | number[]{
         if (args.length <= 1) {
@@ -25,3 +24,4 @@ class stringManipulator {
         return Array.from(str).reduce(acc => acc + 1, 0);
     }
 }
+
