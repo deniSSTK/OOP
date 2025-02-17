@@ -1,6 +1,6 @@
 using System;
 
-namespace project
+namespace Project
 {
     public class StringManipulator
     {
@@ -11,14 +11,18 @@ namespace project
             this.value = value;
         }
 
-        public static getLenght(string str)
+        public static int GetLength(string str)
         {
             return str.Length;
         }
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("123");
+            Console.Write("Enter a string: ");
+            string input = Console.ReadLine();
+
+            int length = GetLength(input);
+            Console.WriteLine($"Length of the string: {length}");
         }
     }
 }
