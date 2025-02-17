@@ -12,11 +12,9 @@ export class stringManipulator {
         if (args.length <= 1) {
             return stringManipulator.lengthCalc(args[0]);
         } else {
-            let list: number[] = [];
-            args.map((item) => {
-                list.push(stringManipulator.lengthCalc(item));
+            return args.map((item) => {
+                return stringManipulator.lengthCalc(item);
             });
-            return list;
         }
     }
 
