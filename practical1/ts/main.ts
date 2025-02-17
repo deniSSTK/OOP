@@ -7,7 +7,6 @@ export class StringManipulatorEncapsulation {
     constructor(text: string) {
         this.text = text;
         this.textLength = stringManipulator.getLength(text) as number;
-
     }
 
     public getText(): string {
