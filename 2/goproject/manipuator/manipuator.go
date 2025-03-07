@@ -41,10 +41,14 @@ func (sm *stringManipulator) ToRight() string {
 	}
 }
 
+func NewStringManipulatorNull() *stringManipulator {
+	return &stringManipulator{value: "", length: 0}
+}
+
 func NewStringManipulator(value string) *stringManipulator {
 	return &stringManipulator{value: value, length: len(value)}
 }
 
-func NewStringManipulatorNoLength(value string) *stringManipulator {
-	return &stringManipulator{value: value}
+func Copy(sm *stringManipulator) *stringManipulator {
+	return &stringManipulator{value: sm.value, length: sm.length}
 }

@@ -21,11 +21,16 @@ func main() {
 	fmt.Println("--- Second example ---")
 	fmt.Println(short.ToString())
 	fmt.Printf("To right - %s\n", short.ToRight())
-	fmt.Println(short.ToStringAll())
+	fmt.Printf("%s\n\n", short.ToStringAll())
 
-	custom := manipuator.NewStringManipulatorNoLength("custom")
-	fmt.Println("--- Third example ---")
+	custom := manipuator.Copy(short)
+	fmt.Println("--- Copy example ---")
 	fmt.Println(custom.ToString())
 	fmt.Printf("To right - %s\n", custom.ToRight())
-	fmt.Println(custom.ToStringAll())
+	fmt.Printf("%s\n\n", custom.ToStringAll())
+
+	nullString := manipuator.NewStringManipulatorNull()
+	fmt.Println("--- NewStringManipulatorNull example ---")
+	fmt.Println(nullString.ToString())
+	fmt.Printf("Length: %d\n", nullString.GetLength())
 }
