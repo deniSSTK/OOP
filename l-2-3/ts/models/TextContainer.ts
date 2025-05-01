@@ -14,7 +14,9 @@ export class TextContainer {
     }
 
     removeRowsContaining(substring: string): void {
-        this.rows = this.rows.filter(row => !row.getContent().includes(substring));
+        this.rows = this.rows.filter(row =>
+            !row.getContent().toLowerCase().trim()
+            .includes(substring.trim().toLowerCase()));
     }
 
     clear(): void {
